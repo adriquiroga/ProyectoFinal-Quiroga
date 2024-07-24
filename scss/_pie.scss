@@ -1,0 +1,31 @@
+.footerbar {
+    @include alineacion (flex, center, center);
+    background-color: $primary-color;
+    font-weight: 500;
+    width: 100%;  
+    justify-content: space-between;
+    &-img {
+      @include medidas(80px, 80px);
+      margin: 10px;
+      justify-content: start;
+      align-items: center;
+    }  
+    .footer-1 {
+      @include alineacion (flex, center, center);
+      justify-content: center;  
+      p, a {
+        margin: 10px;
+      }
+        
+    }
+    .footer-2 {
+      @include alineacion (flex, center, center);
+      justify-content: flex-end;  
+      p{
+        margin: 10px;
+      }  
+      a {
+        margin: 20px;
+      }
+    }
+  }

@@ -1,0 +1,238 @@
+.principal {
+    display: flex;
+    row-gap: 10px;
+    flex-direction:column;
+    align-items: center;
+    background-color: $background-color;  
+    background-size:cover; 
+    background-position: center; 
+  }  
+  .titulo3, .titulo4, .titulo1 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    text-align: center;
+  }
+  .titulo3{
+    color: $text-color;
+  }
+  .titulo3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    align-self: baseline;
+    font-size: map-get($talles , base);    
+  }
+  .titulo4{
+    font-size: map-get($talles , grande);
+    color: $color-preguntas;
+  }
+  .tama5 {
+    @include medidas(80px, 80px);
+    align-items: center;
+    justify-content: center;
+  } 
+  .comienzo {
+    background-color: $background-color2;
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px 0; 
+  }
+  .medida{  
+    @include medidas(200px, 250px);  
+    @include alineacion (flex, center, center);
+    justify-content: center;
+  } 
+  .caja{
+    border: 3px solid $color-caja;
+    max-width: 100%; 
+    height: 600px; 
+    padding: 1rem;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .gradiente{
+    background-image: linear-gradient(to right, #4eeef3, #f1d63c, #fff000 );
+  }
+  .gradiente-arriba{
+    background-image: linear-gradient(to bottom, #4eeef3, #f1d63c, #fff000 );
+  }
+  .rotate-on-hover {
+    transition: transform 0.5s;
+  }  
+  .rotate-on-hover:hover {
+    transform: rotate(360deg);
+  }
+  .frase-princ{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    color: $color-frase;
+  }
+  .btn-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color;
+  }
+  .btn-link:after {
+    content: '\25BC';
+    font-size: 1rem;
+    margin-left: 10px;
+    color: text-color;
+  }
+  .collapsed.btn-link:after {
+    content: '\25B6';
+  }
+  .btn-transparent {
+    background-color: transparent;
+    border: none;
+    color: text-color; 
+  }
+  .btn-transparent:hover,
+  .btn-transparent:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .btn-transparent.dropdown-toggle::after {
+    margin-left: 0.5em;
+  }
+  .dropdown-menu {
+    min-width: 10rem;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "uno     dos    dos"
+        "seis    tres  cuatro"
+        "cinco  cinco  cinco";
+  }
+  .grid-item{
+    display: flex;
+    width: auto;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;   
+    flex-direction: column; 
+    padding: 10px;  
+  }
+  .grid-item img {
+    max-width: 100%;
+    height: 400px;
+  }
+  .uno {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    grid-area: uno;
+  }
+  .dos {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    grid-area: dos;
+  }
+  .tres {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-area: tres;
+  }
+  .cuatro {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    grid-area: cuatro;
+  }
+  .cinco {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    grid-area: cinco;
+  }
+  .seis {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    grid-area: seis;
+  }
+  .parrafo1{
+    font-size: 30px;  
+  }
+  h2 {
+    align-items: center;
+  } 
+  .descri2 {
+    color: $descri2;
+  }
+  .descri3 {
+    color: $descri3;
+  }
+  .descri4 {
+    color: $descri4;
+  }
+  .frase, .lema {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .frase {
+    color: $color-frase2;
+    background-color: $background-frase;
+    border: 3px solid ;
+  }
+  .lema {
+    font-size: 30px;
+    font-style: italic;
+    color: $primary-color;
+    background-color: $background-color;
+    margin-top: 50px;
+  }  
+  .fundacion, .innovacion, .informe {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    border-color: $text-color;
+    border-style: solid;
+  }  
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    background-color: $secondary-color;  
+    h1 {
+      margin-bottom: 40px;
+      text-decoration: underline;
+    }  
+    .form-container {
+      width: 100%;
+      max-width: 600px;  
+      .form-group {
+        margin: 20px;  
+        label {
+          text-align: left;
+          display: block;
+        }
+      }
+    }
+  } 
+  .img-fondo {
+    background-image: url('../assets/faqs/selva4.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;  
+  }
+  .mb-4 {
+    text-align: center;
+  }
+  
+  
+  
+  
